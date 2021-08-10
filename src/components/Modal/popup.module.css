@@ -1,0 +1,24 @@
+.popup{
+    position: fixed;
+    top:45%;
+    left:45%;
+    width:100%;
+    height:40vh;
+    background-color: #fff;
+}
+.popupInner{
+    position: relative;
+    padding: 22px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #fff;
+}
+
+.popupInner button.closeBtn {  
+    float:right;
+}
+
+.popDiv{
+    float:right;
+    margin:0;
+}
