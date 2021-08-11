@@ -25,7 +25,6 @@ export default function App() {
   const [data, setData] = useState(store);
   const [open, setOpen] = useState(false);
 
-  const [backgroundUrl, setBackgroundUrl] = useState('');
   const classes = useStyle();
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
@@ -130,12 +129,7 @@ export default function App() {
   return (
     <StoreApi.Provider value={{ addMoreCard, addMoreList, updateListTitle }}>
       <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${backgroundUrl})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}>
+        className={classes.root}>
         <TopBar setOpen={setOpen} />
 
         <DragDropContext onDragEnd={onDragEnd}>
