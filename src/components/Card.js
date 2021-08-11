@@ -22,7 +22,7 @@ const useStyle = makeStyles((theme) => ({
 export default function Card({ card, index, listId }) {
   const classes = useStyle();
   const [buttonPopup, setButtonPopup] = useState(false);
-  //const { addMoreCard, addMoreList } = useContext(storeApi);
+  // const { updatePopupTitle } = useContext(storeApi);
   
   const [title, setTitle] = useState('');
 
@@ -30,8 +30,9 @@ export default function Card({ card, index, listId }) {
     setTitle(e.target.value);
   };
 
-  const handleBtnConfirm = (e) => {
-    // addMoreCard(title, listId);
+  const handleBtnConfirm = () => {
+    console.log(title, listId);
+    //  updatePopupTitle(title, listId);
     // setTitle('');
   }
   return (
